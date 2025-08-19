@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "JJ8knMT6avjw1PAPc82p3EOx8IySLyT4QurT1rfiTUs=",
+  "Source": "e-pharmacy",
+  "BasePath": "_content/e-pharmacy",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
