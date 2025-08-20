@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mahid\\Desktop\\Project\\e_pharmacy_backend\\e-pharmacy.csproj": {}
+    "/home/mahidulanik/Project/e_pharmacy_backend/e-pharmacy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mahid\\Desktop\\Project\\e_pharmacy_backend\\e-pharmacy.csproj": {
+    "/home/mahidulanik/Project/e_pharmacy_backend/e-pharmacy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mahid\\Desktop\\Project\\e_pharmacy_backend\\e-pharmacy.csproj",
+        "projectUniqueName": "/home/mahidulanik/Project/e_pharmacy_backend/e-pharmacy.csproj",
         "projectName": "e-pharmacy",
-        "projectPath": "C:\\Users\\mahid\\Desktop\\Project\\e_pharmacy_backend\\e-pharmacy.csproj",
-        "packagesPath": "C:\\Users\\mahid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mahid\\Desktop\\Project\\e_pharmacy_backend\\obj\\",
+        "projectPath": "/home/mahidulanik/Project/e_pharmacy_backend/e-pharmacy.csproj",
+        "packagesPath": "/home/mahidulanik/.nuget/packages/",
+        "outputPath": "/home/mahidulanik/Project/e_pharmacy_backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mahid\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/mahidulanik/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -80,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.104/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

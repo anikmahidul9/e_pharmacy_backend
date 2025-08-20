@@ -44,9 +44,39 @@ namespace e_pharmacy.Services
             return await _users.Find(user => true).ToListAsync();
         }
 
-        public async Task UpdateAsync(string id, User updatedUser)
+        public async Task<User> GetByIdAsync(string id)
         {
-            await _users.ReplaceOneAsync(user => user.Id == id, updatedUser);
+            return await _users.Find(u => u.Id == id).FirstOrDefaultAsync();
+        }
+
+        public async Task UpdateAsync(string id, UpdateUserDto updateUserDto)
+        {
+            var existingUser = await _users.Find(u => u.Id == id).FirstOrDefaultAsync();
+            if (existingUser != null)
+            {
+                if (updateUserDto.Username != null)
+                {
+                    existingUser.Username = updateUserDto.Username;
+                }
+                if (updateUserDto.Name != null)
+                {
+                    existingUser.Name = updateUserDto.Name;
+                }
+                if (updateUserDto.Email != null)
+                {
+                    existingUser.Email = updateUserDto.Email;
+                }
+                if (updateUserDto.Occupation != null)
+                {
+                    existingUser.Occupation = updateUserDto.Occupation;
+                }
+                if (updateUserDto.Image != null)
+                {
+                    existingUser.Image = updateUserDto.Image;
+                }
+
+                await _users.ReplaceOneAsync(user => user.Id == id, existingUser);
+            }
         }
 
         public async Task DeleteAsync(string id)

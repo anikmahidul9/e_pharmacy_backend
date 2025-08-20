@@ -38,16 +38,15 @@ namespace e_pharmacy.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(string id, User updatedUser)
+        public async Task<IActionResult> Update(string id, UpdateUserDto updatedUserDto)
         {
-            var user = await _userService.GetByUsernameAsync(updatedUser.Username);
+            var user = await _userService.GetByIdAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            updatedUser.Id = user.Id;
-            await _userService.UpdateAsync(id, updatedUser);
+            await _userService.UpdateAsync(id, updatedUserDto);
             return NoContent();
         }
 
