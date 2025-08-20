@@ -1,6 +1,5 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System.Collections.Generic;
 
 namespace e_pharmacy.Models
 {
@@ -8,12 +7,13 @@ namespace e_pharmacy.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } = null!;
-
+        public string? Id { get; set; }
         public string Username { get; set; } = null!;
-
-        public string PasswordHash { get; set; } = null!;
-
-        public List<string> Roles { get; set; } = new List<string>();
+        public string Password { get; set; } = null!;
+        public string Role { get; set; } = null!;
+        public string Name { get; set; } = null!;
+        public string Email { get; set; } = null!;
+        public string Occupation { get; set; } = null!;
+        public string Image { get; set; } = null!;
     }
 }

@@ -25,16 +25,43 @@ namespace e_pharmacy.Controllers
                 return Conflict("User with this username already exists.");
             }
 
-            var user = new User
+            var newUser = await _userService.CreateAsync(userDto);
+
+            return CreatedAtAction(nameof(Register), new { id = newUser.Id }, newUser);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<User>>> GetAll()
+        {
+            var users = await _userService.GetAllAsync();
+            return Ok(users);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(string id, User updatedUser)
+        {
+            var user = await _userService.GetByUsernameAsync(updatedUser.Username);
+            if (user == null)
             {
-                Username = userDto.Username,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password),
-                Roles = userDto.Roles
-            };
+                return NotFound();
+            }
 
-            await _userService.CreateAsync(user);
+            updatedUser.Id = user.Id;
+            await _userService.UpdateAsync(id, updatedUser);
+            return NoContent();
+        }
 
-            return CreatedAtAction(nameof(Register), new { id = user.Id }, user);
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var user = await _userService.GetByUsernameAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            await _userService.DeleteAsync(id);
+            return NoContent();
         }
     }
 }
