@@ -15,9 +15,24 @@ namespace e_pharmacy.Services
             _users = context.Users;
         }
 
-        public async Task<User> GetByUsernameAsync(string username)
+        public async Task<User?> AuthenticateAsync(LoginDto loginDto)
+        {
+            var user = await GetByEmailAsync(loginDto.Email);
+            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password))
+            {
+                return null;
+            }
+            return user;
+        }
+
+        public async Task<User?> GetByUsernameAsync(string username)
         {
             return await _users.Find(u => u.Username == username).FirstOrDefaultAsync();
+        }
+
+        public async Task<User?> GetByEmailAsync(string email)
+        {
+            return await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
         }
 
         public async Task<User> CreateAsync(CreateUserDto createUserDto)
@@ -44,7 +59,7 @@ namespace e_pharmacy.Services
             return await _users.Find(user => true).ToListAsync();
         }
 
-        public async Task<User> GetByIdAsync(string id)
+        public async Task<User?> GetByIdAsync(string id)
         {
             return await _users.Find(u => u.Id == id).FirstOrDefaultAsync();
         }

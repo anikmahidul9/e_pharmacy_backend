@@ -18,5 +18,7 @@ namespace e_pharmacy.Services
 
         public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
         public IMongoCollection<Product> Products => _database.GetCollection<Product>("Products");
+        public IMongoCollection<Cart> Carts => _database.GetCollection<Cart>("Carts");
+        public IMongoCollection<Order> Orders => _database.GetCollection<Order>("Orders");
     }
 }
