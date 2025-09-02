@@ -1419,25 +1419,24 @@
     ]
   },
   "packageFolders": {
-    "/home/mahidulanik/.nuget/packages/": {}
+    "C:\\Users\\mahid\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mahidulanik/Project/Pharmaci_project/e_pharmacy_backend/e-pharmacy.csproj",
+      "projectUniqueName": "C:\\Users\\mahid\\Desktop\\Project\\e_pharmacy_backend\\e-pharmacy.csproj",
       "projectName": "e-pharmacy",
-      "projectPath": "/home/mahidulanik/Project/Pharmaci_project/e_pharmacy_backend/e-pharmacy.csproj",
-      "packagesPath": "/home/mahidulanik/.nuget/packages/",
-      "outputPath": "/home/mahidulanik/Project/Pharmaci_project/e_pharmacy_backend/obj/",
+      "projectPath": "C:\\Users\\mahid\\Desktop\\Project\\e_pharmacy_backend\\e-pharmacy.csproj",
+      "packagesPath": "C:\\Users\\mahid\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mahid\\Desktop\\Project\\e_pharmacy_backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mahidulanik/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\mahid\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1456,7 +1455,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -1502,7 +1501,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.104/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
